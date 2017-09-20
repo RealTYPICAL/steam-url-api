@@ -1,17 +1,33 @@
 
 import * as opn from 'opn';
-import { STEAM_URL } from './constants';
+import { FRIENDS_URL } from './constants';
+import { Settings } from './settings';
+import { Status } from './status';
 
 export class Friends {
 
-    private static readonly FRIENDS = 'friends';
-    private static readonly FRIENDS_URL = STEAM_URL + Friends.FRIENDS + '/';
+    public readonly settings = new Settings();
+
+    public readonly status = new Status();
 
     public add(id: string): void {
-        opn(Friends.FRIENDS_URL + 'add/' + id);
+        opn(FRIENDS_URL + 'add/' + id);
     }
 
     public friends(id: string): void {
-        opn(Friends.FRIENDS_URL + 'friends/' + id);
+        opn(FRIENDS_URL + 'friends/' + id);
     }
+
+    public joinChat(id: string): void {
+        opn(FRIENDS_URL + 'joinchat/' + id);
+    }
+
+    public message(id: string): void {
+        opn(FRIENDS_URL + 'message/' + id);
+    }
+
+    public players(): void {
+        opn(FRIENDS_URL + 'players');
+    }
+
 }
