@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/RealTYPICAL/steam-url-api/issues"
   },
-  "homepage": "https://github.com/RealTYPICAL/steam-url-api#readme"
+  "homepage": "https://github.com/RealTYPICAL/steam-url-api#readme",
+  "devDependencies": {
+    "typescript": "^2.5.2"
+  }
 }
