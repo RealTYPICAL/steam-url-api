@@ -1,14 +1,14 @@
 
 import * as opn from 'opn';
-import * as os from 'os';
 import { Friends } from './friends';
 import { BASE_STEAM_URL, STEAM_URL} from './constants';
-
-os.networkInterfaces()
+import { Music } from './music';
 
 class Steam {
 
     public readonly friends = new Friends();
+
+    public readonly music = new Music();
 
     public openSteam(...args: string[]): void {
         //TODO: Pretty sure I have to parse the args to a valid string.
@@ -65,6 +65,28 @@ class Steam {
     public exitSteam(): void {
         opn(STEAM_URL + 'ExitSteam');
     }
+
+    public flushConfig(): void {
+        opn(STEAM_URL + 'flushconfig');
+    }
+
+    public guestPasses(): void {
+        opn(STEAM_URL + 'guestpasses');
+    }
+
+    public hardwarePromot(): void {
+        //TODO: I'm not sure whether there should be an argument being used here.
+        opn(STEAM_URL + 'hardwarepromo');
+    }
+
+    public install(id: string): void {
+        opn(STEAM_URL + 'install/' + id);
+    }
+
+    public installAddon(addon: string): void {
+        opn(STEAM_URL + 'installaddon/' + addon);
+    }
+
 }
 
 const steam = new Steam();

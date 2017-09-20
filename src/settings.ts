@@ -5,18 +5,17 @@ import { FRIENDS_URL } from './constants';
 
 export class Settings {
 
-    private static readonly SETTINGS = 'settings';
-    private static readonly SETTINGS_URL = FRIENDS_URL + Settings.SETTINGS + '/';
+    private static readonly SETTINGS = FRIENDS_URL + 'settings/';
 
     public hideOffline(): void {
-        opn(Settings.SETTINGS_URL + 'hideoffline');
+        opn(Settings.SETTINGS + 'hideoffline');
     }
 
     public showAvatars(): void {
-        opn(Settings.SETTINGS_URL + 'showavatars');
+        opn(Settings.SETTINGS + 'showavatars');
     }
 
     public sortByName(): void {
-        opn(Settings.SETTINGS_URL + 'sortbyname');
+        opn(Settings.SETTINGS + 'sortbyname');
     }
 }
