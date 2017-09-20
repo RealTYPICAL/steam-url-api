@@ -1,0 +1,23 @@
+{
+  "name": "steam-url-api",
+  "version": "1.0.0",
+  "description": "The URL steam protocol.",
+  "main": "main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RealTYPICAL/steam-url-api.git"
+  },
+  "keywords": [
+    "steam",
+    "url-protocol"
+  ],
+  "author": "James Tooley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RealTYPICAL/steam-url-api/issues"
+  },
+  "homepage": "https://github.com/RealTYPICAL/steam-url-api#readme"
+}
