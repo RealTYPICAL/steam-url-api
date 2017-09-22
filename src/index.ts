@@ -5,6 +5,8 @@ import { BASE_STEAM_URL, STEAM_URL } from './constants';
 import { Music } from './music';
 import { Nav } from './nav';
 import { Open } from './open';
+import { Settings } from './settings'
+import { URL } from './url'
 
 class Steam {
 
@@ -12,6 +14,12 @@ class Steam {
     public readonly music = new Music();
     public readonly nav = new Nav();
     public readonly open = new Open();
+    public readonly settings = new Settings();
+    public readonly url = new URL();
+
+    constructor(){
+        //TODO: Test whether steam is installed on this computer and throw exception if it isn't.
+    }
 
     public openSteam(...args: string[]): void {
         //TODO: Pretty sure I have to parse the args to a valid string.
@@ -132,6 +140,38 @@ class Steam {
 
     public runGameId(id: string): void {
         opn(STEAM_URL + 'rungameid' + id);
+    }
+
+    public store(id?: string): void {
+        opn(STEAM_URL + 'store/' + id);
+    }
+
+    public subscriptionInstall(...id: string[]): void {
+        //TODO: There is probably a clever fancy way of doing this.
+    }
+
+    public support(...params: string[]): void {
+        if(params){
+            //TODO: See above about clever fanciness.
+        } else {
+            opn(STEAM_URL + 'support/*');
+        }
+    }
+
+    public takeSurvey(id: string): void {
+        opn(STEAM_URL + 'takesurvey/' + id);
+    }
+
+    public uninstall(id: string): void {
+        opn(STEAM_URL + 'uninstall/' + id);
+    }
+
+    public updateNews(id: string): void {
+        opn(STEAM_URL + 'updatenews/' + id);
+    }
+
+    public validate(id: string): void {
+        opn(STEAM_URL + 'validate/' + id);
     }
 
 }
