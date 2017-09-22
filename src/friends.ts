@@ -1,7 +1,7 @@
 
 import * as opn from 'opn';
 import { FRIENDS_URL } from './constants';
-import { FriendsSettings } from './settings';
+import { FriendsSettings } from './friendsSettings';
 import { Status } from './status';
 
 export class Friends {
