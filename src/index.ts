@@ -22,8 +22,7 @@ class Steam {
     }
 
     public openSteam(...args: string[]): void {
-        // TODO: Pretty sure I have to parse the args to a valid string.
-        opn(BASE_STEAM_URL + args);
+        opn(BASE_STEAM_URL + args.join(' '));
     }
 
     public addNonSteamGame(): void {
@@ -79,7 +78,7 @@ class Steam {
         opn(STEAM_URL + 'guestpasses');
     }
 
-    public hardwarePromot(): void {
+    public hardwarePromo(): void {
         // TODO: I'm not sure whether there should be an argument being used here.
         opn(STEAM_URL + 'hardwarepromo');
     }
@@ -141,7 +140,7 @@ class Steam {
     }
 
     public subscriptionInstall(...id: string[]): void {
-        // TODO: There is probably a clever fancy way of doing this.
+        opn(STEAM_URL + 'subscriptioninstall/' + id.join('/'));
     }
 
     public support(...params: string[]): void {
