@@ -18,7 +18,11 @@ class Steam {
     public readonly url = new URL();
 
     constructor() {
-        // TODO: Test whether steam is installed on this computer and throw exception if it isn't.
+        opn(STEAM_URL + 'blahblah', err => {
+            if (err) {
+                throw new Error('Steam is not installed.');
+            }
+        });
     }
 
     public openSteam(...args: string[]): void {
