@@ -22,7 +22,9 @@
   "homepage": "https://github.com/RealTYPICAL/steam-url-api#readme",
   "devDependencies": {
     "@types/opn": "^3.0.28",
-    "typescript": "^2.5.2"
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2",
+    "typescript-formatter": "^6.0.0"
   },
   "dependencies": {
     "opn": "^5.1.0"

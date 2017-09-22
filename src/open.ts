@@ -1,24 +1,24 @@
-import { Common } from './common';
-import { Games } from './games';
-import { STEAM_URL } from './constants';
 import * as opn from 'opn';
+import { Common } from './common';
+import { STEAM_URL } from './constants';
+import { Games } from './games';
 
 export class Open {
 
     private static readonly OPEN = STEAM_URL + 'open/';
-    private readonly common: Common;
     public readonly games: Games;
+    private readonly common: Common;
 
-    constructor(){
+    constructor() {
         this.common = new Common(Open.OPEN);
         this.games = this.common.games;
     }
 
-    public activateProduct(): void{
+    public activateProduct(): void {
         opn(Open.OPEN + 'activateproduct');
     }
 
-    public bigPicture(): void{
+    public bigPicture(): void {
         opn(Open.OPEN + 'bigpicture');
     }
 

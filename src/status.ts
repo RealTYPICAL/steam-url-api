@@ -1,32 +1,32 @@
 
-import { FRIENDS_URL } from "./constants";
 import * as opn from 'opn';
+import { FRIENDS_URL } from "./constants";
 
 export class Status {
 
     private static readonly STATUS = FRIENDS_URL + 'status/';
 
-    public away(){
+    public away() {
         opn(Status.STATUS + 'away');
     }
 
-    public busy(){
+    public busy() {
         opn(Status.STATUS + 'busy');
     }
 
-    public trade(){
+    public trade() {
         opn(Status.STATUS + 'trade');
     }
 
-    public play(){
+    public play() {
         opn(Status.STATUS + 'play');
     }
 
-    public offline(){
+    public offline() {
         opn(Status.STATUS + 'offline');
     }
 
-    public online(){
+    public online() {
         opn(Status.STATUS + 'online');
     }
 }

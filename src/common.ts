@@ -1,5 +1,5 @@
-import { Games } from './games';
 import * as opn from 'opn';
+import { Games } from './games';
 
 export class Common {
 

@@ -3,10 +3,10 @@ import { STEAM_URL } from './constants';
 
 export class Games {
 
-    private static readonly GAMES_URL = URL + 'games/'
+    private static readonly GAMES_URL = URL + 'games/';
     private static readonly DETAILS = 'details';
 
-    constructor(private readonly URL: String) { }
+    constructor(private readonly URL: string) { }
 
     /**
      * Opens list of games.
@@ -17,7 +17,7 @@ export class Games {
     }
 
     public details(id?: string): void {
-        if(id) {
+        if (id) {
             opn(Games.GAMES_URL + Games.DETAILS + '/' + id);
         } else {
             opn(Games.GAMES_URL + Games.DETAILS);

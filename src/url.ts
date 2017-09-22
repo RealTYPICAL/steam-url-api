@@ -1,12 +1,12 @@
-import { STEAM_URL } from './constants';
 import * as opn from 'opn';
+import { STEAM_URL } from './constants';
 
 export class URL {
 
     private static readonly BASE_URL = STEAM_URL + 'url/';
 
     public chatBanListAdmin(page?: string): void {
-        page ? opn(URL.BASE_URL + 'ChatBanListAdmin/' + page) 
+        page ? opn(URL.BASE_URL + 'ChatBanListAdmin/' + page)
             : opn(URL.BASE_URL + 'ChatBanListAdmin');
     }
 

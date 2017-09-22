@@ -1,12 +1,12 @@
 
 import * as opn from 'opn';
-import { Friends } from './friends';
 import { BASE_STEAM_URL, STEAM_URL } from './constants';
+import { Friends } from './friends';
 import { Music } from './music';
 import { Nav } from './nav';
 import { Open } from './open';
-import { Settings } from './settings'
-import { URL } from './url'
+import { Settings } from './settings';
+import { URL } from './url';
 
 class Steam {
 
@@ -17,12 +17,12 @@ class Steam {
     public readonly settings = new Settings();
     public readonly url = new URL();
 
-    constructor(){
-        //TODO: Test whether steam is installed on this computer and throw exception if it isn't.
+    constructor() {
+        // TODO: Test whether steam is installed on this computer and throw exception if it isn't.
     }
 
     public openSteam(...args: string[]): void {
-        //TODO: Pretty sure I have to parse the args to a valid string.
+        // TODO: Pretty sure I have to parse the args to a valid string.
         opn(BASE_STEAM_URL + args);
     }
 
@@ -56,17 +56,11 @@ class Steam {
 
     /**
      * @param target Can be IP or DNS.
-     * @param port 
-     * @param password 
+     * @param port
+     * @param password
      */
     public connect(target?: string, port?: number, password?: string): void {
         opn(STEAM_URL + 'connect/' + this.createTarget(target, port) + '/' + password && password || '');
-    }
-
-    private createTarget(target?: string, port?: number): string {
-        let request = target && target || '';
-        request = port && request + ':' + port || '';
-        return request;
     }
 
     public defrag(id: string): void {
@@ -86,7 +80,7 @@ class Steam {
     }
 
     public hardwarePromot(): void {
-        //TODO: I'm not sure whether there should be an argument being used here.
+        // TODO: I'm not sure whether there should be an argument being used here.
         opn(STEAM_URL + 'hardwarepromo');
     }
 
@@ -130,7 +124,7 @@ class Steam {
         opn(STEAM_URL + 'removeaddon/' + addon);
     }
 
-    public run(id: string): void{
+    public run(id: string): void {
         opn(STEAM_URL + 'run/' + id);
     }
 
@@ -147,12 +141,12 @@ class Steam {
     }
 
     public subscriptionInstall(...id: string[]): void {
-        //TODO: There is probably a clever fancy way of doing this.
+        // TODO: There is probably a clever fancy way of doing this.
     }
 
     public support(...params: string[]): void {
-        if(params){
-            //TODO: See above about clever fanciness.
+        if (params) {
+            // TODO: See above about clever fanciness.
         } else {
             opn(STEAM_URL + 'support/*');
         }
@@ -172,6 +166,12 @@ class Steam {
 
     public validate(id: string): void {
         opn(STEAM_URL + 'validate/' + id);
+    }
+
+    private createTarget(target?: string, port?: number): string {
+        let request = target && target || '';
+        request = port && request + ':' + port || '';
+        return request;
     }
 
 }
