@@ -176,5 +176,4 @@ class Steam {
 
 }
 
-const steam = new Steam();
-module.exports = steam;
+module.exports = Steam;
