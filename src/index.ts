@@ -1,14 +1,17 @@
 
 import * as opn from 'opn';
 import { Friends } from './friends';
-import { BASE_STEAM_URL, STEAM_URL} from './constants';
+import { BASE_STEAM_URL, STEAM_URL } from './constants';
 import { Music } from './music';
+import { Nav } from './nav';
+import { Open } from './open';
 
 class Steam {
 
     public readonly friends = new Friends();
-
     public readonly music = new Music();
+    public readonly nav = new Nav();
+    public readonly open = new Open();
 
     public openSteam(...args: string[]): void {
         //TODO: Pretty sure I have to parse the args to a valid string.
@@ -85,6 +88,50 @@ class Steam {
 
     public installAddon(addon: string): void {
         opn(STEAM_URL + 'installaddon/' + addon);
+    }
+
+    public openUrl(url: string): void {
+        opn(STEAM_URL + 'openurl/' + url);
+    }
+
+    public openExternalUrl(url: string): void {
+        opn(STEAM_URL + 'openurl_external/' + url);
+    }
+
+    public paypalCancel(): void {
+        opn(STEAM_URL + 'paypal/cancel');
+    }
+
+    public preload(id: string): void {
+        opn(STEAM_URL + 'preload/' + id);
+    }
+
+    public publisher(name: string): void {
+        opn(STEAM_URL + 'publisher/' + name);
+    }
+
+    public purchase(id: string): void {
+        opn(STEAM_URL + 'purchase' + id);
+    }
+
+    public purchaseSubscription(id: string): void {
+        opn(STEAM_URL + 'purchase/subscription/' + id);
+    }
+
+    public removeAddon(addon: string): void {
+        opn(STEAM_URL + 'removeaddon/' + addon);
+    }
+
+    public run(id: string): void{
+        opn(STEAM_URL + 'run/' + id);
+    }
+
+    public runSafe(id: string): void {
+        opn(STEAM_URL + 'runsafe/' + id);
+    }
+
+    public runGameId(id: string): void {
+        opn(STEAM_URL + 'rungameid' + id);
     }
 
 }

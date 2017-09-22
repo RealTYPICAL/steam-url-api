@@ -1,12 +1,12 @@
 
 import * as opn from 'opn';
 import { FRIENDS_URL } from './constants';
-import { Settings } from './settings';
+import { FriendsSettings } from './settings';
 import { Status } from './status';
 
 export class Friends {
 
-    public readonly settings = new Settings();
+    public readonly settings = new FriendsSettings();
 
     public readonly status = new Status();
 

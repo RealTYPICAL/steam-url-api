@@ -3,19 +3,19 @@ import * as opn from 'opn';
 
 import { FRIENDS_URL } from './constants';
 
-export class Settings {
+export class FriendsSettings {
 
     private static readonly SETTINGS = FRIENDS_URL + 'settings/';
 
     public hideOffline(): void {
-        opn(Settings.SETTINGS + 'hideoffline');
+        opn(FriendsSettings.SETTINGS + 'hideoffline');
     }
 
     public showAvatars(): void {
-        opn(Settings.SETTINGS + 'showavatars');
+        opn(FriendsSettings.SETTINGS + 'showavatars');
     }
 
     public sortByName(): void {
-        opn(Settings.SETTINGS + 'sortbyname');
+        opn(FriendsSettings.SETTINGS + 'sortbyname');
     }
 }
