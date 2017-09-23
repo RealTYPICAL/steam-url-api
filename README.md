@@ -2,5 +2,5 @@
 ## Install
 
 ```
-$ npm install --save opn
+$ npm install --save steam-url-api
 ```
