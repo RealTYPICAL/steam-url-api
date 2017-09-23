@@ -4,7 +4,8 @@
   "description": "The URL steam protocol.",
   "main": "main/index.js",
   "scripts": {
-    "test": "mocha out/test/test.js"
+    "test": "mocha out/test/test.js",
+    "precommit": "tslint *.ts"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "@types/mocha": "^2.2.43",
     "@types/opn": "^3.0.28",
     "chai": "^4.1.2",
+    "husky": "^0.14.3",
     "mocha": "^3.5.3",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2",

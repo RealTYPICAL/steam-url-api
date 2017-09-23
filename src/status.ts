@@ -1,6 +1,6 @@
 
 import * as opn from 'opn';
-import { FRIENDS_URL } from "./constants";
+import { FRIENDS_URL } from './constants';
 
 export class Status {
 

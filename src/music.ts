@@ -1,6 +1,6 @@
 
 import * as opn from 'opn';
-import { STEAM_URL } from "./constants";
+import { STEAM_URL } from './constants';
 
 export class Music {
 
