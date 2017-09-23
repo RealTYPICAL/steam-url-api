@@ -4,7 +4,7 @@
   "description": "The URL steam protocol.",
   "main": "main/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha out/test/test.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/RealTYPICAL/steam-url-api#readme",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
     "@types/opn": "^3.0.28",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2",
     "typescript-formatter": "^6.0.0"
