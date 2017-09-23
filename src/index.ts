@@ -6,6 +6,7 @@ import { Music } from './music';
 import { Nav } from './nav';
 import { Open } from './open';
 import { Settings } from './settings';
+import { Support } from './support';
 import { URL } from './url';
 
 class Steam {
@@ -16,6 +17,7 @@ class Steam {
     public readonly open = new Open();
     public readonly settings = new Settings();
     public readonly url = new URL();
+    public readonly support = new Support();
 
     constructor() {
         opn(STEAM_URL + 'blahblah', err => {
@@ -145,14 +147,6 @@ class Steam {
 
     public subscriptionInstall(...id: string[]): void {
         opn(STEAM_URL + 'subscriptioninstall/' + id.join('/'));
-    }
-
-    public support(...params: string[]): void {
-        if (params) {
-            // TODO: See above about clever fanciness.
-        } else {
-            opn(STEAM_URL + 'support/*');
-        }
     }
 
     public takeSurvey(id: string): void {
