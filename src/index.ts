@@ -9,6 +9,10 @@ import { Settings } from './settings';
 import { Support } from './support';
 import { URL } from './url';
 
+// TODO: There seems to be a common pattern amongst all of these classes.
+// Write a utility pattern which takes the "URL" as an arg so there's less need to repeat yourself.
+// Or possibly currying in .ts?
+
 class Steam {
 
     public readonly friends = new Friends();
