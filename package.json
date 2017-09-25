@@ -25,6 +25,7 @@
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
     "@types/opn": "^3.0.28",
+    "active-window": "^0.1.0",
     "chai": "^4.1.2",
     "husky": "^0.14.3",
     "mocha": "^3.5.3",
