@@ -5,7 +5,7 @@
   "main": "main/index.js",
   "scripts": {
     "test": "mocha out/test/test.js",
-    "precommit": "tsc && tslint *.ts"
+    "precommit": "tslint *.ts"
   },
   "repository": {
     "type": "git",

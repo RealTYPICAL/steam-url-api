@@ -5,6 +5,7 @@ import { Music } from './music';
 import { Steam } from './steam';
 
 // TODO: The pre commit hook should only check the hygiene of the files that are being committed.
+// TODO: The pre commit hook should detect compilation errors. Compiling all is too slow. Only compile relevent files.
 
 export function createSteam(callback: (err?: Error, steam?: ISteam) => void): void {
     opn(STEAM_URL + 'blahblah', err => {
