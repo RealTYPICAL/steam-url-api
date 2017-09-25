@@ -6,7 +6,7 @@ describe('Base Steam API Tests', () => {
 
     it('has steam installed.', () => {
         // Something.
-        createSteam((err: Error, steam: Steam) => {
+        createSteam((err: Error, steam: ISteam) => {
             if (err) {
                 // Something.
             }
