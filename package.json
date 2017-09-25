@@ -33,6 +33,6 @@
     "typescript-formatter": "^6.0.0"
   },
   "dependencies": {
-    "opn": "^5.1.0"
+    "opn": "3.0.2"
   }
 }
