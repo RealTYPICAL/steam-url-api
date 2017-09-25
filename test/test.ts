@@ -1,10 +1,15 @@
 
 import { assert, expect } from 'chai';
-import { SteamFactory } from '../src/index';
+import { createSteam, Steam } from '../src/index';
 
 describe('Base Steam API Tests', () => {
 
     it('has steam installed.', () => {
         // Something.
+        createSteam((err: Error, steam: Steam) => {
+            if (err) {
+                // Something.
+            }
+        });
     });
 });

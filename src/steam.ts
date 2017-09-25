@@ -1,6 +1,7 @@
 import * as opn from 'opn';
 import { BASE_STEAM_URL, STEAM_URL } from './constants';
 import { Friends } from './friends';
+import { ISteam } from './index';
 import { Music } from './music';
 import { Nav } from './nav';
 import { Open } from './open';
@@ -12,7 +13,7 @@ import { URL } from './url';
 // Write a utility pattern which takes the "URL" as an arg so there's less need to repeat yourself.
 // Or possibly currying in .ts?
 
-export class Steam {
+export class Steam implements ISteam {
 
     public readonly friends = new Friends();
     public readonly music = new Music();
