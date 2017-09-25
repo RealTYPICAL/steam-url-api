@@ -11,6 +11,8 @@ import { URL } from './url';
 
 // TODO: The pre commit hook should only check the hygiene of the files that are being committed.
 // TODO: The pre commit hook should detect compilation errors. Compiling all is too slow. Only compile relevent files.
+// TODO: Add error callbacks to all functions.
+// TODO: Add the child process to the return value...? maybe. Couldn't hurt.
 
 export function createSteam(callback: (err?: Error, steam?: ISteam) => void): void {
     opn(STEAM_URL + 'blahblah', err => {
