@@ -1,5 +1,6 @@
 // TODO: Write typings for this.
 // TODO: Will probably need a similar node module to be written to close windows for clean up.
+// https://msdn.microsoft.com/en-us/library/windows/desktop/ms632682(v=vs.85).aspx
 const monitor = require('active-window'); // tslint:disable-line
 import { assert, expect } from 'chai';
 import { createSteam, ISteam } from '../src/index';
