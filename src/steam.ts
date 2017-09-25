@@ -27,8 +27,8 @@ export class Steam implements ISteam {
         opn(BASE_STEAM_URL + args.join(' '));
     }
 
-    public addNonSteamGame(): void {
-        opn(STEAM_URL + 'AddNonSteamGame');
+    public addNonSteamGame(callback: (err: Error) => void): void {
+        opn(STEAM_URL + 'AddNonSteamGame', callback);
     }
 
     public advertise(id: string): void {

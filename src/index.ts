@@ -35,7 +35,7 @@ export interface ISteam {
     readonly support: Support;
 
     openSteam(...args: string[]): void;
-    addNonSteamGame(): void;
+    addNonSteamGame(callback: (err: Error) => void): void;
     advertise(id: string): void;
     acceptGiftOrGuestPast(pass: string): void;
     appNews(id: string): void;

@@ -9,4 +9,13 @@ describe('Base Steam API Tests', () => {
             assert(steam, 'Steam is initialised.');
         });
     });
+
+    it('can add non steam game.', done => {
+        createSteam((err: Error, steam: ISteam) => {
+            steam.addNonSteamGame(steamErr => {
+                assert(!steamErr, 'There was an error adding non steam game.');
+                done();
+            });
+        });
+    });
 });
