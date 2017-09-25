@@ -93,11 +93,11 @@ export class Steam implements ISteam {
         opn(STEAM_URL + 'installaddon/' + addon);
     }
 
-    public openUrl(url: string): void {
+    public openURL(url: string): void {
         opn(STEAM_URL + 'openurl/' + url);
     }
 
-    public openExternalUrl(url: string): void {
+    public openExternalURL(url: string): void {
         opn(STEAM_URL + 'openurl_external/' + url);
     }
 
@@ -133,7 +133,7 @@ export class Steam implements ISteam {
         opn(STEAM_URL + 'runsafe/' + id);
     }
 
-    public runGameId(id: string): void {
+    public runGameID(id: string): void {
         opn(STEAM_URL + 'rungameid' + id);
     }
 
