@@ -1,9 +1,16 @@
 // TODO: Write typings for this.
+// TODO: Will probably need a similar node module to be written to close windows for clean up.
 const monitor = require('active-window'); // tslint:disable-line
 import { assert, expect } from 'chai';
 import { createSteam, ISteam } from '../src/index';
 
 describe('Base Steam API Tests', () => {
+
+    before(() => {
+        monitor.getActiveWindow(window => {
+            // TODO: Warm up active window API before using it for testing.
+        });
+    });
 
     it('has steam installed.', () => {
         createSteam((err: Error, steam: ISteam) => {
