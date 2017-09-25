@@ -10,6 +10,7 @@ describe('Base Steam API Tests', () => {
             if (err) {
                 // Something.
             }
+            assert(steam, 'Steam is initialised.');
         });
     });
 });
