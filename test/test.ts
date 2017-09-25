@@ -1,6 +1,6 @@
 
 import { assert, expect } from 'chai';
-import { createSteam, Steam } from '../src/index';
+import { createSteam, ISteam } from '../src/index';
 
 describe('Base Steam API Tests', () => {
 
