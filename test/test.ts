@@ -4,14 +4,29 @@
 // TODO: I could probably make this module faster by writing it in c++ and calling it from node...
 const monitor = require('active-window'); // tslint:disable-line
 import { assert, expect } from 'chai';
+import { Library, types } from 'ffi';
 import { createSteam, ISteam } from '../src/index';
+
+const stringPtr = types.CString;
+
+const lib = new Library('user32', {
+    GetForegroundWindow: [
+        'long', [],
+    ],
+    GetWindowTextA: [
+        'long', ['long', stringPtr, 'int'],
+    ],
+});
 
 describe('Base Steam API Tests', () => {
 
     before(() => {
-        monitor.getActiveWindow(window => {
-            // TODO: Warm up active window API before using it for testing.
-        });
+        // monitor.getActiveWindow(window => {
+            // Warm up active window API before using it for testing.
+            // Otherwise you get timeouts.
+        // });
+        const blah = lib.GetForegroundWindow();
+        const bigTest = 'jweofijwef';
     });
 
     it('has steam installed.', () => {
