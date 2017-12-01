@@ -10,6 +10,16 @@
                     "${workspaceRoot}/out/**/*.js"
                 ],
                 "stopOnEntry": true
+            },
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Test Run",
+                "program": "${workspaceRoot}/example/testRun.js",
+                "outFiles": [
+                    "${workspaceRoot}/out/**/*.js"
+                ],
+                "stopOnEntry": true
             }
         ]
     }

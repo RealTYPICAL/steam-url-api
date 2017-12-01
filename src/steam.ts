@@ -125,8 +125,8 @@ export class Steam implements ISteam {
         opn(STEAM_URL + 'removeaddon/' + addon);
     }
 
-    public run(id: string): void {
-        opn(STEAM_URL + 'run/' + id);
+    public run(id: string, callback: (err: Error) => void): void {
+        opn(STEAM_URL + 'run/' + id, callback);
     }
 
     public runSafe(id: string): void {

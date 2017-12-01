@@ -34,14 +34,16 @@ function getForegroundWindowName(): string {
 describe('Base Steam API Tests', () => {
 
     it('can add non steam game.', done => {
-        createSteam((err: Error, steam: ISteam) => {
-            steam.addNonSteamGame(steamErr => {
-                assert(!steamErr, 'There was an error adding non steam game.');
-                setTimeout(() => {
-                    assert.equal(getForegroundWindowName(), 'Add a Game', 'Add non steam game should be open.');
-                    done();
-                }, 200);
-            });
+        createSteam((err?: Error, steam?: ISteam) => {
+            if (steam) {
+                steam.addNonSteamGame(steamErr => {
+                    assert(!steamErr, 'There was an error adding non steam game.');
+                    setTimeout(() => {
+                        assert.equal(getForegroundWindowName(), 'Add a Game', 'Add non steam game should be open.');
+                        done();
+                    }, 200);
+                });
+            }
         });
     });
 
