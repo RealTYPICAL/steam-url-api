@@ -1,0 +1,11 @@
+node_modules/
+*.log
+*.tgz
+
+example/
+src/
+test/
+tsconfig.json
+tslint.json
+tsfmt.json
+out/test
