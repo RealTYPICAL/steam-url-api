@@ -1,8 +1,9 @@
 {
   "name": "steam-url-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The URL steam protocol.",
   "main": "out/src/index.js",
+  "typings": "out/src/index",
   "scripts": {
     "test": "mocha out/test/",
     "precommit": "tslint *.ts",
