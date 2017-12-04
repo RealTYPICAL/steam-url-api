@@ -4,6 +4,7 @@ node_modules/
 
 example/
 src/
+*.js.map
 test/
 tsconfig.json
 tslint.json
