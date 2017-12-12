@@ -58,7 +58,7 @@ export interface ISteam {
     purchase(id: string): void;
     purchaseSubscription(id: string): void;
     removeAddon(addon: string): void;
-    run(id: string, callback: (err: Error) => void): void;
+    run(id: string, callback?: (err: Error) => void): void;
     runSafe(id: string): void;
     runGameID(id: string): void;
     store(id?: string): void;
